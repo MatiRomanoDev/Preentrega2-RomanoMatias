@@ -8,51 +8,105 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/estilo.css">
     <title>DeCaffé</title>
 </head>
 <body>
-    <header>
-        <a href="index.html">
-            <img src="img/cafe-logo.jpg" alt="Boton home">
-        </a>
-        <h1 class="banner">
-            <a href="index.html">DeCaffé <span>|| Café de especialidad</span></a>
-        </h1>
-        <nav class="navbar">
-            <ul class="navbar-list">
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./pages/productos.html">Productos</a></li>
-                <li><a href="./pages/recetas.html">Recetas</a></li>
-                <li><a href="./pages/nosotros.html">Nosotros</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="carrusel">
-            <h2 class="subtitulo">Mas vendidos</h2>
-            <div class="masVendidos">
-                <div class="alineado">
-                    <h3>Café: Colombia</h3>
-                    <a href="#"><img src="./img/paquete_cafe.png" alt="imagen 1"></a>
-                </div>
-                <div class="alineado">
-                    <h3>Café: América</h3>
-                    <a href="#"><img src="./img/paquete_cafe.png" alt="imagen 2"></a>
-                </div>
-                <div class="alineado">
-                    <h3>Café: Etiopía</h3>
-                    <a href="#"><img src="./img/paquete_cafe.png" alt="imagen 3"></a>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="fondopie">
-        <h4>Seguinos en nuestras redes!</h4>
-        <a href="http://www.instagram.com" target="_blank"><img src="./img/instagram-logo.png" alt="Icono instagram" width="50px"></a>
-        <a href="http://www.twitter.com" target="_blank"><img src="./img/tw-logo.webp" alt="Icono twitter" width="60px"></a>
-        <a href="http://www.facebook.com" target="_blank"><img src="./img/facebook-logo-0.png" alt="Icono facebook" width="60px"></a>
-    </footer>
+    <div class="grid-container">
+        <div class="grid_item grid-header">
+            <header>
+                <a href="index.html"><img src="img/cafe-logo2.png" alt="Boton home">
+                </a>
+                <h1 class="banner">
+                <a href="index.html">DeCaffé <span> || Café de especialidad</span></a>
+                </h1>
+                <nav class="navbar">
+                    <ul class="navbar-list">
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./pages/productos.html">Productos</a></li>
+                        <li><a href="./pages/recetas.html">Recetas</a></li>
+                        <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                        <li><a href="./pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="grid_item grid-main">
+            <main class="carrusel-container">
+                <h2 class="subtitulo">Recomendados esta semana</h2>
+                <div id="carouselExampleDark" class="carousel carousel-dark slide d-flex">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="./img/bolsa-tela-granos-cafe.jpg" class="d-block w-100 imgCarrusel" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5 class="labelFoto">Café: Italia</h5>
+                          <p class="labelFoto">Se caracteriza por su intenso sabor y aroma, con un toque amargo y una crema espesa y consistente en la parte superior.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img src="./img/bolsa-tela-granos-cafe.jpg" class="d-block w-100 imgCarrusel" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5 class="labelFoto">Café: Etiopía</h5>
+                          <p class="labelFoto">Se destaca por su delicado sabor floral y afrutado, con notas distintivas de bergamota y jazmín, ofreciendo una experiencia aromática única.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./img/bolsa-tela-granos-cafe.jpg" class="d-block w-100 imgCarrusel" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5 class="labelFoto">Café: Colombia</h5>
+                          <p class="labelFoto"> Se distingue por su suavidad y cuerpo balanceado, con sabores dulces y notas de caramelo, chocolate y frutas</p>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  <h3 class="subtit">Mas vendidos</h3>
+                  <div class="ofertas">                    
+                    <div class="productoV">
+                        <h4>Café: Colombia</h4>
+                        <a href="#"><img src="./img/bolsa-tela-granos-cafe.jpg" alt=""></a>
+                    </div>
+                    <div class="productoV">
+                        <h4>Café: Brasil</h4>
+                        <a href="#"><img src="./img/bolsa-tela-granos-cafe.jpg" alt=""></a>
+                    </div>
+                    <div class="productoV">
+                        <h4>Café Etiopía</h4>
+                        <a href="#"><img src="./img/bolsa-tela-granos-cafe.jpg" alt=""></a>
+                    </div>
+                  </div>
+            </main>
+        </div>
+        <div class="grid_item grid-aside">
+          <div>
+              <h4>Conoce nuestras recetas!</h3>
+              <a href="./pages/recetas.html"> <img src="./img/recetas.png" alt=""></a>
+          </div>
+      </div>
+        <div class="grid_item grid-footer">
+            <footer class="fondopie">
+                <h4>Seguinos en nuestras redes!</h4>
+                <a href="http://www.instagram.com" target="_blank"><img src="./img/instagram-logo.png" alt="Icono instagram" width="50px"></a>
+                <a href="http://www.twitter.com" target="_blank"><img src="./img/tw-logo.webp" alt="Icono twitter" width="60px"></a>
+                <a href="http://www.facebook.com" target="_blank"><img src="./img/facebook-logo-0.png" alt="Icono facebook" width="60px"></a>
+            </footer>    
+        </div>
+    </div>       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>   
 </body>
 </html>

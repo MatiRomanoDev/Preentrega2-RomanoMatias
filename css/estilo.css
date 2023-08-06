@@ -4,25 +4,56 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #f0efca;
+    background-color: #4b4a32;
+    background-image: url(../img/coffee-pattern.jpg);
+    background-repeat: repeat;
+    
     
 }
+.grid-container{    
+    display: grid;          
+    background-color: beige;
+    background-repeat:space;
+    grid-template-areas: 
+    "header header "
+    "main  aside "
+    "footer  footer ";
+    grid-template-rows: .5fr 3fr auto auto;  
+    grid-template-columns: 2fr 1fr; 
+    
+}
+.grid-header{
+    grid-area: header;   
+}
+.grid-main{
+    display: flex;    
+    grid-area: main;
+    justify-content: center;
+    
+}
+.grid-footer{
+    grid-area: footer;
+}
+.grid-aside{
+    display: flex;
+    grid-area: aside;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
 
 header{
     display: flex;
     align-items: center;   
     color: rgb(216, 216, 189);
     background-color: #4d4855;
-    background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
-    
+    background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);    
 }
-
 header h1{
-    display: flex;
     font-family: 'Gruppo', sans-serif;
     font-size: 3rem;
-    padding: 10px;
-    
+    padding: 10px;    
 }
 header h2{
     margin: 20px;
@@ -39,6 +70,7 @@ header h2{
     font-style: oblique;
 }
 .navbar {
+    background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);    
     display: flex;
     padding: 5px;
     justify-content: flex-end;
@@ -47,8 +79,7 @@ header h2{
 .navbar-list {
     list-style-type: none;
     display: flex;
-    
-    
+        
 }
 .navbar-list li {
     margin: 0 10px;
@@ -69,7 +100,7 @@ header h2{
     border-radius: 20px;
 }
 header img{
-    width: 50px;
+    width: 100px;
     
 }
 header{
@@ -88,22 +119,25 @@ main h2{
     margin-bottom: 10px;
 }
 main{
-    margin-top: 50px;
-    border-bottom: 3px solid brown;
+    margin-top: 60px;
+    
     
 }
 
 .subtitulo{
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
     font-size: 3rem;
-    padding: 50px;
+    padding-top: 10px;
+    
 }
     
 h4{
     text-align: center;
 }
 footer{
-    height: 100%;
+    height: 90%;
+    margin-top: 50px;
 }
 
 .fondopie{
@@ -199,7 +233,7 @@ fieldset{
     display: flex;
     height: 500px;
     width: 500px;
-    opacity: .9;
+    opacity: .95;
 }
 .contUs{
     display: flex;
@@ -232,6 +266,7 @@ main .productos img{
 
 footer{
     display: flex;
+    border-top: 5px solid brown;
           
 }
 
@@ -317,5 +352,138 @@ form .campoForm .campoTexto{
 .cafeCorretto img{
     margin-right: 0%;
 }
+.carousel{    
+    width: 900px;
+    justify-items: center;
+}
 
 
+.labelFoto{
+    background-color: #312e2e;
+    color:#ecb03f ;
+    
+}
+.ofertas{
+    display: flex;
+    margin-top: 30px;
+    background-color: rgb(214, 187, 129);
+}
+.ofertas img{
+    margin: 20px;
+    
+}
+
+.productoV img{
+    width: 250px;
+    border-style: double 2px brown;
+    background-color: aliceblue;
+}
+.subtit{
+    padding: 30px;
+}
+.grid-footer {
+    height: 90%;
+    align-self:flex-end;
+}
+/* ... (CSS existente) ... */
+
+/* Media query para dispositivos móviles con una resolución máxima de 480px */
+@media screen and (max-width: 480px) {
+    .grid-container {            
+        grid-template-areas: 
+            "header"
+            "main"
+            "aside"
+            "footer";  /* Cambiamos el orden para que el aside aparezca arriba del footer */      
+        grid-template-rows: .3fr 3fr auto auto; /* Reducimos la altura del header para dar más espacio al aside */
+        grid-template-columns: 1fr; /* Ahora solo tenemos una columna */
+    }
+
+    /* Ajustar el tamaño de la imagen del carrusel en dispositivos móviles */
+    .carrusel-container img {
+        width: 100px;
+    }
+
+    /* Ajustar el ancho del carrusel en dispositivos móviles */
+    .carousel {
+        width: 300px;
+    }
+
+    /* Ajustar el tamaño de fuente en dispositivos móviles */
+    .subtitulo {
+        font-size: 2rem;
+    }
+
+    .h4 {
+        font-size: 1.5rem;
+    }
+
+    .productoV img {
+        width: 120px; /* Reducir el tamaño de las imágenes en el div ofertas */
+        border-style: double 2px brown;
+        background-color: aliceblue;
+    }
+
+    /* Ajustar el tamaño de fuente en el header para dispositivos móviles */
+    header h1 {
+        font-size: 2rem;
+        padding: 5px;    
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+
+    .navbar-list {
+        flex-direction: column;            
+    }
+
+    .navbar-list li {
+        margin: 0;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .navbar-list li a {
+        margin: 5px;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    /* Ajustar el tamaño de la imagen del logo en el header para dispositivos móviles */
+    header img {
+        width: 80px;
+    }
+
+    /* Alinear elementos del header hacia la izquierda en dispositivos móviles */
+    header {
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /* Ajustar la frase "Recomendados esta semana" hacia la izquierda en dispositivos móviles */
+    .subtitulo {
+        text-align: left;
+    }
+    
+    /* Alinear el footer hacia la izquierda en dispositivos móviles */
+    .fondopie {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    /* Achicar la distancia entre el aside y el main en dispositivos móviles */
+    .grid-aside {
+        padding: 5px;
+    }
+
+    /* Alinear el aside hacia la izquierda en dispositivos móviles */
+    .grid-aside {
+        grid-column: 1;
+    }
+    .grid-footer {
+        align-self: end;
+    }
+}
