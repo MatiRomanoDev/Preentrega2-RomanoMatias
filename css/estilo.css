@@ -41,7 +41,30 @@ body{
     flex-direction: column;
     justify-content: center;
 }
-
+.container-us {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 7fr .8fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+}
+  
+.header {
+    grid-area: header; 
+}
+  
+.main {
+    grid-area: main; 
+}
+  
+.footer {
+    grid-area: footer; 
+}
+  
 
 header{
     display: flex;
@@ -166,8 +189,11 @@ footer{
 
 .videoFrame{
     padding: 50px;
-    
-    
+    width: 700px;
+    height: 540px;    
+}
+.contUs img{
+    width: 400px;
 }
 .campoForm{
     font-size: 1.5rem;
@@ -385,105 +411,116 @@ form .campoForm .campoTexto{
     height: 90%;
     align-self:flex-end;
 }
-/* ... (CSS existente) ... */
+.videoFrame{
 
-/* Media query para dispositivos móviles con una resolución máxima de 480px */
+}
+
 @media screen and (max-width: 480px) {
     .grid-container {            
         grid-template-areas: 
             "header"
             "main"
             "aside"
-            "footer";  /* Cambiamos el orden para que el aside aparezca arriba del footer */      
-        grid-template-rows: .3fr 3fr auto auto; /* Reducimos la altura del header para dar más espacio al aside */
-        grid-template-columns: 1fr; /* Ahora solo tenemos una columna */
+            "footer";  
+        grid-template-rows: .3fr 3fr auto auto; 
+        grid-template-columns: 1fr; 
     }
-
-    /* Ajustar el tamaño de la imagen del carrusel en dispositivos móviles */
     .carrusel-container img {
         width: 100px;
-    }
-
-    /* Ajustar el ancho del carrusel en dispositivos móviles */
+    }   
     .carousel {
         width: 300px;
-    }
-
-    /* Ajustar el tamaño de fuente en dispositivos móviles */
+    }    
     .subtitulo {
         font-size: 2rem;
     }
-
     .h4 {
         font-size: 1.5rem;
     }
-
     .productoV img {
-        width: 120px; /* Reducir el tamaño de las imágenes en el div ofertas */
+        width: 120px; 
         border-style: double 2px brown;
         background-color: aliceblue;
-    }
-
-    /* Ajustar el tamaño de fuente en el header para dispositivos móviles */
+    }    
     header h1 {
         font-size: 2rem;
         padding: 5px;    
     }
-
     header h2 {
         font-size: 1.5rem;
         padding: 5px;
     }
-
     .navbar-list {
         flex-direction: column;            
     }
-
     .navbar-list li {
         margin: 0;
         padding: 10px;
         font-size: 1rem;
     }
-
     .navbar-list li a {
         margin: 5px;
         padding: 1rem;
         font-size: 1rem;
-    }
-    
-    /* Ajustar el tamaño de la imagen del logo en el header para dispositivos móviles */
+    }        
     header img {
         width: 80px;
-    }
-
-    /* Alinear elementos del header hacia la izquierda en dispositivos móviles */
+    }    
     header {
         justify-content: flex-start;
         align-items: flex-start;
         flex-direction: column;
-    }
-
-    /* Ajustar la frase "Recomendados esta semana" hacia la izquierda en dispositivos móviles */
+    }   
     .subtitulo {
         text-align: left;
-    }
-    
-    /* Alinear el footer hacia la izquierda en dispositivos móviles */
+    }   
     .fondopie {
         justify-content: flex-start;
         align-items: flex-start;
-    }
-
-    /* Achicar la distancia entre el aside y el main en dispositivos móviles */
+    }    
     .grid-aside {
         padding: 5px;
-    }
-
-    /* Alinear el aside hacia la izquierda en dispositivos móviles */
+    }       
     .grid-aside {
         grid-column: 1;
     }
     .grid-footer {
         align-self: end;
     }
+    .container-us {         
+        grid-template-areas:
+        "header "
+        "main "
+        "footer ";
+        grid-template-rows: auto;
+    }
+    .aboutUs{
+        font-size: 1.1rem;
+        display: flex;
+    }
+    .contUs{
+        flex-direction: column;
+        justify-items: flex-start;
+    }
+    .videoFrame{
+        width: 500px;
+        height: 360px;
+    }
+    .contUs img{
+        width: 250px;
+        justify-items:flex-start;
+    }
+    .aboutUs{
+        width: 95%; 
+        height: auto;
+    }
+    .contacto .campoTexto {
+        width: 100%;
+        height: auto;
+      }
+    .aboutUs a,
+    .aboutUs p {
+        display: inline-block;
+}
+
 }
