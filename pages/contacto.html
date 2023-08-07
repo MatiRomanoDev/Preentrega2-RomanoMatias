@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../img/coffee32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon-16x16.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap"       rel="stylesheet">
@@ -28,29 +28,31 @@
             </ul>
         </nav>                    
     </header>
-    <main>      
-        <h2 class="subtitulo">Contactate con nosotros</h2>      
-        <section class="contact">      
-            <img class="relleno" src="../img/cafe-fondo.jpg" alt="">              
-            <form action="">
-                <fieldset>
-                    <div> 
-                       <label for="name" class="campoForm">Nombre</label>
-                       <input type="text" name="name">          
-                     </div>        
-                     <div>
-                       <label for="email" class="campoForm">Correo electrónico</label>
-                       <input type="email" required name="email" placeholder="decaffé@gmail.com">
-                    </div>      
-                    <div>
-                       <label for="text"></label>
-                       <input type="text" class="campoTexto" placeholder="Escribe tu consulta aquí.">
-                    </div>      
-                    <input class="inputButton" type="submit" value="Enviar Datos">
-                    <input class="inputButton" type="reset" value="Borrar Datos" >
-                </fieldset> 
-            </form> 
-         </section>      
+    <h2 class="subtitulo">Contactate con nosotros</h2>
+    <main class="formulario">               
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nombre y Apellido</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input checkboton" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Acepto los términos</label>
+            </div>
+            <button type="submit" class="btn   colorBoton">Enviar</button>
+            <button type="submit" class="btn   colorBoton">Borrar Datos</button>
+        </form>
+        <img class="relleno" src="../img/cafe-fondo.jpg" alt="">
     </main>
     <footer class="fondopie">    
         <h4>Seguinos en nuestras redes!</h4>  
