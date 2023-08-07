@@ -174,6 +174,7 @@ footer{
     
 }
 .aboutUs{
+    background-color: #fce2b39c;    
     border-style:double;
     font-size: 2.5rem;
     margin: 10px;
@@ -220,10 +221,6 @@ input{
     margin-left: 20px;
    
 }
-
-     
-    
-
 .masVendidos{
     display: flex;
 }
