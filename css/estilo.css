@@ -1,588 +1,540 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: #4b4a32;
-    background-image: url(../img/coffee-pattern.jpg);
-    background-repeat: repeat;
-    
-    
-}
-.grid-container{    
-    display: grid;          
-    background-image: url(../img/coffee-pattern.jpg);
-    background-repeat:space;
-    grid-template-areas: 
-    "header header "
-    "main  aside "
-    "footer  footer ";
-    grid-template-rows: 1fr auto  1fr;  
-    grid-template-columns: 2fr 1fr; 
-    
-}
-.grid-header{
-    grid-area: header;   
-}
-.grid-main{
-    display: flex;    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #4b4a32;
+  background-image: url(../img/coffee-pattern.jpg);
+  background-repeat: repeat;
+  max-width: 100vw; }
+
+.grid-container {
+  min-height: 100vh;
+  display: grid;
+  background-image: url(../img/coffee-pattern.jpg);
+  background-repeat: space;
+  grid-template-areas: "header header " "main  aside " "footer  footer ";
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 2fr 1fr; }
+  .grid-container .grid-header {
+    grid-area: header; }
+  .grid-container .grid-main {
+    display: flex;
     grid-area: main;
-    justify-content: center;
-    
-}
-.grid-footer{
-    align-items: flex-end;
-    grid-area: footer;
-}
-.grid-aside{
+    justify-content: center; }
+  .grid-container .grid-aside {
     display: flex;
     grid-area: aside;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
-}
-.container-us {  
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 7fr .8fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-    "header header"
-    "main main"
-    "footer footer";
-}
-  
-.header {
-    grid-area: header; 
-}
-  
-.main {
-    grid-area: main; 
-}
-  
-.footer {
-    grid-area: footer; 
-}
-  
-
-header{
+    justify-content: space-evenly; }
+  .grid-container .grid-footer {
+    align-items: center;
+    grid-area: footer; }
+  .grid-container header {
+    grid-area: header;
     display: flex;
-    align-items: center;   
-    color: rgb(216, 216, 189);
+    align-items: center;
+    color: #d8d8bd;
     background-color: #4d4855;
-    background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);    
-}
-header h1{
+    background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%); }
+    .grid-container header h1 {
+      font-family: 'Gruppo', sans-serif;
+      font-size: 3rem;
+      padding: 10px; }
+      .grid-container header h1 a {
+        text-decoration: none; }
+        .grid-container header h1 a:visited {
+          color: #d8d8bd; }
+    .grid-container header h2 {
+      padding: 10px;
+      font-style: oblique; }
+    .grid-container header img {
+      width: 100px; }
+    .grid-container header span {
+      font-style: italic;
+      font-size: 1.5rem;
+      margin-top: 20px; }
+    .grid-container header .navbar {
+      display: flex;
+      padding: 5px;
+      justify-content: flex-end;
+      width: auto; }
+      .grid-container header .navbar .navbar-list {
+        list-style-type: none;
+        display: flex;
+        justify-items: flex-end; }
+        .grid-container header .navbar .navbar-list li {
+          margin: 0 10px;
+          padding: 20px;
+          font-size: 1.1rem; }
+          .grid-container header .navbar .navbar-list li a {
+            margin: 5px;
+            padding: 1rem;
+            text-decoration: none;
+            color: #d8d8bd;
+            font-size: 1.2rem; }
+            .grid-container header .navbar .navbar-list li a:hover {
+              color: black;
+              background-color: beige;
+              border-radius: 20px; }
+  .grid-container main {
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 60px;
+    width: 66vw; }
+    .grid-container main h2 {
+      justify-self: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-bottom: 10px; }
+    .grid-container main .subtitulo {
+      font-family: 'Times New Roman', Times, serif;
+      text-align: center;
+      font-size: 3rem;
+      padding: 20px; }
+    .grid-container main .grid-main {
+      display: flex;
+      grid-area: main;
+      justify-content: center; }
+    .grid-container main .carousel {
+      max-width: 850px;
+      height: auto;
+      justify-items: center;
+      margin: auto; }
+      .grid-container main .carousel img {
+        max-width: 850px; }
+      .grid-container main .carousel .labelFoto {
+        background-color: #312e2e;
+        color: #ecb03f; }
+    .grid-container main .subtit {
+      font-weight: bold;
+      font-style: italic;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 30px;
+      margin: auto; }
+    .grid-container main .oferta {
+      display: flex;
+      max-width: max-content;
+      margin: 0 auto;
+      background-color: #d6bb81;
+      padding-top: 10px; }
+      .grid-container main .oferta img {
+        width: 250px;
+        margin: 20px;
+        opacity: .8; }
+        .grid-container main .oferta img:hover {
+          border-style: double;
+          border-color: #000000;
+          border-width: .2rem; }
+      .grid-container main .oferta h4 {
+        text-align: center; }
+  .grid-container .grid-aside {
+    width: auto;
+    display: flex;
+    grid-area: aside;
+    align-items: center;
+    flex-direction: column; }
+    .grid-container .grid-aside h4 {
+      text-align: center; }
+    .grid-container .grid-aside img {
+      max-width: 430px;
+      border-radius: 10%; }
+  .grid-container .grid-footer {
+    margin-top: 30px;
+    border-top: 4px solid brown;
+    background-color: #4d4855;
+    background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
+    display: flex;
+    justify-content: center;
+    color: #d8d8bd;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif; }
+    .grid-container .grid-footer img {
+      width: 60px;
+      height: 60px;
+      align-items: center; }
+
+header {
+  display: flex;
+  align-items: center;
+  color: #d8d8bd;
+  background-color: #4d4855;
+  background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%); }
+  header h1 {
     font-family: 'Gruppo', sans-serif;
     font-size: 3rem;
-    padding: 10px;    
-}
-header h2{
-    margin: 20px;
-}
-header h1 a{
-    text-decoration: none;
-}
-header h1 a:visited{
-
-    color: rgb(216, 216, 189);
-}
-header h2{
+    padding: 10px; }
+    header h1 a {
+      text-decoration: none; }
+      header h1 a:visited {
+        color: #d8d8bd; }
+  header h2 {
     padding: 10px;
-    font-style: oblique;
-}
-.navbar {
-    background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);    
+    font-style: oblique; }
+  header img {
+    width: 100px; }
+  header span {
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-top: 20px; }
+  header .navbar {
     display: flex;
     padding: 5px;
     justify-content: flex-end;
-}
-  
-.navbar-list {
-    list-style-type: none;
-    display: flex;
-        
-}
-.navbar-list li {
-    margin: 0 10px;
-    padding: 20px;
-    font-size: 1.1rem;
-}
-  
-.navbar-list li a {
-    margin: 5px;
-    padding: 1rem;
-    text-decoration: none;
-    color: rgb(216, 216, 189);
-    font-size: 1.2rem;
-}
-.navbar-list li a:hover{
-    color: black;
-    background-color: beige;
-    border-radius: 20px;
-}
-header img{
-    width: 100px;
-    
-}
-header{
-    text-align: center;
-    align-items: center;
-}
-span{
-    font-style: italic;
-    font-size: 1.5rem;
-    margin-top: 20px;
-}
-  
-main h2{
-    justify-self: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-bottom: 10px;
-}
-main{
-    margin-top: 60px;
-    
-    
-}
+    width: auto; }
+    header .navbar .navbar-list {
+      list-style-type: none;
+      display: flex;
+      justify-items: flex-end; }
+      header .navbar .navbar-list li {
+        margin: 0 10px;
+        padding: 20px;
+        font-size: 1.1rem; }
+        header .navbar .navbar-list li a {
+          margin: 5px;
+          padding: 1rem;
+          text-decoration: none;
+          color: #d8d8bd;
+          font-size: 1.2rem; }
+          header .navbar .navbar-list li a:hover {
+            color: black;
+            background-color: beige;
+            border-radius: 20px; }
 
-.subtitulo{
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 60px; }
+  main .subtitulo {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     font-size: 3rem;
-    padding:50px
-    
-}
-    
-h4{
-    text-align: center;
-}
-footer{
-    height: 90%;
-    margin-top: 50px;
-}
-
-.fondopie{
-   
-    font-size: 1.5rem;
-    color: rgb(216, 216, 189);
-    background-color: #4d4855;
-    background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
-}
-.aboutUs{
-    background-color: #fce2b39c;    
-    border-style:double;
-    font-size: 2.5rem;
-    margin: 10px;
-    padding: 10px;
-    
-    
-}
-.aboutUs a{
-    text-decoration: none;
-}
-.aboutUs a:visited{
-    color: black;
-}
-
-.videoFrame{
-    padding: 50px;
-    width: 700px;
-    height: 540px;    
-}
-.contUs img{
-    width: 400px;
-}
-.campoForm{
-    font-size: 1.5rem;
-    font-family: 'Roboto Slab', serif;
-    padding: 10px;
-    margin: 10px;
-}
-.campoTexto{
-    text-align: left;
-    padding: 20px;
-    margin: 10px;
-    width: 300px;
-    height: 100px;
-}
-
-input{
-    width: 300px;
-    height: 30px;
-}
-.inputButton{
-    margin-top: 30px;
-    width: 100px;
-    margin-left: 20px;
-   
-}
-.masVendidos{
-    display: flex;
-}
-.masVendidos .alineado h3{
-    text-align:center;
-    font-style: oblique;
-}
-.masVendidos img{
-    width: 550px;
-}
-
-.contenedor{
+    padding: 20px; }
+  main .contenedor {
     display: flex;
     justify-content: space-around;
-    flex-wrap:wrap;
-}
-.contenedor img{
-    width: 350px;
-    padding-block: 20px;
-    margin: 1rem;
-}
-.contact{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    margin-inline: 50px;
-    
-}
-.relleno{
-    
-    height: 500px;
-    width: 500px;
-    opacity: .95;
-}
-.contUs{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.contUs img{
-    padding-block: 15px;
-}
-
-
-main .productos{
-    
-    display: flex;
-    flex-wrap: wrap; 
-    
-}
-.alineado{
-    width: 50%;
-    padding: 10px;
-}
-main .productos img{
-    width: 250px;
-    padding: 20px;
-    border-style: double 2px black;
-   
-}
-.producto h3{
-    text-align: center;
-    font-style: oblique;
-}
-.producto img{
-    border-style:inset;
-    border-color: #000000;
-    opacity: .8;
-}
-.producto img:hover{
-    border-style: double;
-    border-width: 5px;
-    border-color: #000000;
-    opacity: 1;
-}
-
-footer{
-    display: flex;
-    border-top: 5px solid brown;
-          
-}
+    flex-wrap: wrap; }
+    main .contenedor img {
+      width: 350px;
+      padding-block: 20px;
+      margin: 1rem; }
+    main .contenedor .producto h3 {
+      text-align: center; }
+    main .contenedor .producto img {
+      max-width: 500px;
+      border-style: inset;
+      border-color: #000000;
+      opacity: .8; }
+      main .contenedor .producto img:hover {
+        border-style: double;
+        border-width: 5px;
+        border-color: #000000;
+        opacity: 1; }
 
 .fondopie {
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-}
+  display: flex;
+  border-top: 5px solid brown;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  margin-top: 50px;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #d8d8bd;
+  background-color: #4d4855;
+  background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+  .fondopie img {
+    max-width: 60px;
+    max-height: 60px;
+    align-items: center; }
 
-.formulario{
+.container-us {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "header header" "main main" "footer footer"; }
+  .container-us .grid-header {
+    grid-area: header; }
+  .container-us .grid-main {
+    grid-area: main;
     display: flex;
-    justify-content: space-around;    
-}
-form{
-    
+    justify-content: center; }
+    .container-us .grid-main .subtitulo {
+      font-family: 'Times New Roman', Times, serif;
+      text-align: center;
+      font-size: 3rem;
+      padding: 20px; }
+    .container-us .grid-main .aboutUs {
+      background-color: #fce2b39c;
+      border-style: double;
+      font-size: 2rem;
+      margin: 10px;
+      padding: 10px;
+      text-align: justify; }
+    .container-us .grid-main .contUs {
+      display: flex;
+      align-items: center;
+      justify-content: space-around; }
+      .container-us .grid-main .contUs .videoFrame {
+        padding: 50px;
+        width: 1080px;
+        height: 720px; }
+      .container-us .grid-main .contUs img {
+        width: 400px; }
+  .container-us .grid-footer {
+    grid-area: footer; }
+
+.subtitulo {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  font-size: 3rem;
+  padding: 20px; }
+
+.formulario {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: safe; }
+  .formulario .form {
+    padding-top: 30px;
     width: 600px;
     background-color: #d6b46cbd;
-    font-family:Arial, Helvetica, sans-serif
-}
-.contact{
-    display: flex;
-    padding: 50px;
-}
-.cafeHelado{
-    background-color:#f3ca7e;
-    display: flex;   
-    font-style: italic;
-    font-size: 2rem; 
-    justify-content: space-around;
-    border-style:dotted;
-    
-}
-.imgReceta{
-    display: flex;
-    justify-content: flex-end;
-    width: 450px;
-    margin: auto;
-    
-}
-.cafeHelado h2{
+    font-family: Arial, Helvetica, sans-serif; }
+    .formulario .form .colorBoton {
+      background-color: #421e1a;
+      color: #d8ba34; }
+      .formulario .form .colorBoton:hover {
+        background-color: #ddda42;
+        color: #11100f; }
+  .formulario .relleno {
+    margin-top: 20px;
+    max-width: 400px;
+    height: auto;
+    opacity: .9; }
+
+.contRecetas img {
+  max-width: 450px;
+  margin: auto;
+  padding-left: 30px; }
+
+.contRecetas .listaIngredientes {
+  text-align: justify;
+  justify-content: center;
+  margin: auto; }
+
+.contRecetas .subt {
+  margin: auto; }
+
+.contRecetas .cafeHelado {
+  background-color: #f3ca7e;
+  display: flex;
+  font-style: italic;
+  font-size: 1.8rem;
+  justify-content: space-around;
+  border-style: dotted; }
+  .contRecetas .cafeHelado h2 {
     padding-left: 20px;
     font-size: 2rem;
-    font-style: italic;
-    
-}
-.listaIngredientes{   
-    align-items: center;
-    margin-left: 50px;
-    margin-right: 20px;
-}
-.subt{
-   margin: 20px;
-}
-.cafeDom{
-    background-color: #ebb34c;
-    display: flex;   
-    font-style: italic;
-    font-size: 1.8rem;  
-    border-style: dotted;
-    border-bottom: none;  
-    border-top: none;    
-}
+    font-style: italic; }
 
-
-.cafeDom h2{
+.contRecetas .cafeDom {
+  background-color: #ebb34c;
+  display: flex;
+  font-style: italic;
+  font-size: 1.8rem;
+  border-style: dotted;
+  border-bottom: none;
+  border-top: none;
+  justify-content: space-around; }
+  .contRecetas .cafeDom h2 {
+    margin: 0 auto;
     padding-left: 20px;
-    padding-right: 80px;
     font-size: 2rem;
-    font-style: italic;
-}
-.listaIngredientes{
-    text-align:justify;
-    justify-content: center;
-}
-.cafeCorretto{
-    background-color:#f3c56f;
-    display: flex;   
-    font-style: italic;
-    font-size: 1.8rem; 
-    border-style:dotted;
-    
-    
-}
-.cafeCorretto h2{
-    padding-left: 20px;
-    padding-right: 130px;
-    font-size: 2rem;
-    font-style: italic;
-}
-.cafeCorretto img{
-    margin-right: 0%;
-}
-.carousel{    
-    width: 850px;
-    height:auto;
-    justify-items: center;
-}
-.carousel-container img{
-    width: 500px;
-}
+    font-style: italic; }
 
-
-.labelFoto{
-    background-color: #312e2e;
-    color:#ecb03f ;
-    
-}
-.oferta{
-    display: flex;
-    margin-top: 30px;
-    background-color: rgb(214, 187, 129);
-}
-.oferta img{
-    width: 250px;
-    margin: 20px;  
-    opacity: .8;     
-}
-.oferta img:hover{    
-    border-style:  double;
-    border-color: #000000;
-    border-width: .2rem;
-}
-
-
-.subtit{
-    padding: 30px;
-}
-.grid-footer {
-    height: 90%;
-    align-self:flex-end;
-}
-
-.colorBoton{
-    background-color: #421e1a;
-    color: rgb(216, 186, 52);
-}
-.colorBoton:hover{
-    background-color: rgb(221, 218, 66);
-    color: #11100f;
-}
-.lateral{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.lateralBoton{
-    padding: 50px;    
-}
-
-.lateralBoton img{
-    display: flex;
-    margin-top: 30px;
-    width: 400px;
-    border-radius: 10%;
-    
-}
+.contRecetas .cafeCorretto {
+  background-color: #f3c56f;
+  display: flex;
+  font-style: italic;
+  font-size: 1.8rem;
+  border-style: dotted; }
+  .contRecetas .cafeCorretto img {
+    margin-right: 0%; }
 
 @media screen and (max-width: 480px) {
-    .grid-container {            
-        grid-template-areas: 
-            "header"
-            "main"
-            "aside"
-            "footer";  
-        grid-template-rows: .3fr 2fr auto auto; 
-        grid-template-columns: 1fr; 
-    }
-    .carrusel-container img {
-        width: 100px;
-    }   
-    .carousel {
-        width: 300px;
-    }    
-    .subtitulo {
-        font-size: 2rem;
-    }
-    .h4 {
+  .grid-container {
+    justify-content: flex-start;
+    grid-template-areas: "header" "main" "aside" "footer";
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr; }
+    .grid-container .grid-header {
+      grid-area: header;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start; }
+      .grid-container .grid-header h1 {
         font-size: 1.5rem;
-    }
-    
-    .productoV img {
-        width: 110px; 
-        border-style: double 2px brown;
-        background-color: aliceblue;
-    }    
-    header h1 {
-        font-size: 2rem;
-        padding: 5px;    
-    }
-    header h2 {
-        font-size: 1.5rem;
-        padding: 5px;
-    }
-    .navbar-list {
-        flex-direction: column;            
-    }
-    .navbar-list li {
-        margin: 0;
-        padding: 10px;
-        font-size: 1rem;
-    }
-    .navbar-list li a {
-        margin: 5px;
-        padding: 1rem;
-        font-size: 1rem;
-    }        
-    header img {
-        width: 80px;
-    }    
-    header {
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-direction: column;
-    }   
-    .subtitulo {
-        text-align: left;
-    }   
-    .fondopie {
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-    .grid-main{
-        height: auto;
-    }    
-    .grid-aside {
-        padding: 5px;
-        height: auto;
-    }       
-    .grid-aside {
-        grid-column: 1;
-    }
-    .grid-footer {
-        align-self: end;
-    }
-    .container-us {         
-        grid-template-areas:
-        "header "
-        "main "
-        "footer ";
-        grid-template-rows: auto;
-    }
-    .aboutUs{
-        font-size: 1.1rem;
+        padding: 5px; }
+      .grid-container .grid-header img {
+        max-width: 80px; }
+      .grid-container .grid-header span {
+        font-size: 1.5rem; }
+      .grid-container .grid-header .navbar .navbar-list {
         display: flex;
-    }
-    .contUs{
-        flex-direction: column;
+        flex-direction: column; }
+        .grid-container .grid-header .navbar .navbar-list li {
+          padding: 5px; }
+          .grid-container .grid-header .navbar .navbar-list li a {
+            padding: 0;
+            font-size: .8rem; }
+    .grid-container .grid-main {
+      padding: 10px;
+      grid-area: main;
+      display: flex;
+      justify-content: flex-start;
+      width: auto; }
+      .grid-container .grid-main .subtitulo {
+        font-size: 2rem;
+        text-align: start; }
+      .grid-container .grid-main .carrusel-container {
         justify-items: flex-start;
-    }
-    .videoFrame{
-        width: 500px;
-        height: 360px;
-    }
-    .contUs img{
-        width: 250px;
-        justify-items:flex-start;
-    }
-    .aboutUs{
-        width: 95%; 
-        height: auto;
-    }
-    .contacto .campoTexto {
-        width: 100%;
-        height: auto;
-      }
-    .aboutUs a,
-    .aboutUs p {
-        display: inline-block;
-    }
-    .formulario{
-        display: flex;
-        flex-direction: column;
-    }
-    .relleno{
-        margin-top: 20px;
-        width: 300px;
-        justify-self: center;
-    }
-    .producto img{
-        width: 250px;
-    }
-    
-    
-
-}
+        margin: 0%; }
+      .grid-container .grid-main .subtit {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0%; }
+      .grid-container .grid-main .oferta {
+        flex-direction: column; }
+        .grid-container .grid-main .oferta img {
+          max-width: 200px; }
+    .grid-container .grid-aside {
+      grid-area: aside; }
+      .grid-container .grid-aside .lateralBoton {
+        padding-top: 50px;
+        text-align: center; }
+      .grid-container .grid-aside img {
+        max-width: 200px;
+        margin: auto; }
+    .grid-container .grid-footer {
+      grid-area: footer; }
+      .grid-container .grid-footer h4 {
+        font-size: 1rem; }
+      .grid-container .grid-footer img {
+        max-width: 50px; }
+  header {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    header h1 {
+      font-size: 1.5rem;
+      padding: 5px; }
+    header img {
+      max-width: 80px; }
+    header span {
+      font-size: 1.5rem; }
+    header .navbar .navbar-list {
+      display: flex;
+      flex-direction: column; }
+      header .navbar .navbar-list li {
+        padding: 5px; }
+        header .navbar .navbar-list li a {
+          padding: 0;
+          font-size: .8rem; }
+  main {
+    display: flex;
+    flex-direction: column; }
+    main .subtitulo {
+      font-size: 2rem; }
+    main .contenedor .producto h3 {
+      font-size: 1.5rem; }
+    main .contenedor .producto img {
+      max-width: 300px; }
+  .fondopie {
+    display: flex; }
+    .fondopie h4 {
+      font-size: 1.2rem;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-right: 5px; }
+    .fondopie img {
+      width: 50px; }
+  .container-us {
+    display: flex;
+    flex-direction: column; }
+    .container-us .grid-main {
+      flex-direction: column; }
+      .container-us .grid-main .subtitulo {
+        text-align: start;
+        font-size: 2rem; }
+      .container-us .grid-main .aboutUs {
+        font-size: 1.1rem;
+        text-align: justify;
+        max-width: 400px; }
+      .container-us .grid-main .contUs {
+        flex-direction: column; }
+        .container-us .grid-main .contUs .videoFrame {
+          display: none; }
+        .container-us .grid-main .contUs img {
+          margin-top: 20px;
+          max-width: 300px; }
+  .subtitulo {
+    font-size: 2rem; }
+  .formulario {
+    margin-top: 0; }
+    .formulario img {
+      display: none;
+      max-width: 300px;
+      height: auto; }
+  .contRecetas {
+    margin-left: 0; }
+    .contRecetas img {
+      display: none; }
+    .contRecetas .subtitulo {
+      font-size: 1.8rem;
+      text-align: center; }
+    .contRecetas .cafeHelado {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      font-size: 1.5rem;
+      padding: 5px;
+      margin: auto;
+      border: none; }
+      .contRecetas .cafeHelado h2 {
+        font-size: 1.5rem;
+        text-align: center; }
+      .contRecetas .cafeHelado .listaIngredientes .subt {
+        font-size: 1rem; }
+    .contRecetas .cafeDom {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      font-size: 1.5rem;
+      padding: 5px;
+      margin: auto;
+      border: none; }
+      .contRecetas .cafeDom h2 {
+        font-size: 1.5rem;
+        text-align: center; }
+      .contRecetas .cafeDom .listaIngredientes .subt {
+        font-size: 1rem; }
+    .contRecetas .cafeCorretto {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      font-size: 1.5rem;
+      padding: 5px;
+      margin: auto;
+      border: none; }
+      .contRecetas .cafeCorretto h2 {
+        font-size: 1.5rem;
+        text-align: center; }
+      .contRecetas .cafeCorretto .listaIngredientes .subt {
+        font-size: 1rem; } }
