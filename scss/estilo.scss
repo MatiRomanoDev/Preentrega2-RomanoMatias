@@ -20,6 +20,8 @@ body{
     "footer  footer ";
     grid-template-rows: repeat(3, auto);  
     grid-template-columns: 2fr 1fr; 
+    overflow-x: hidden;
+    overflow-y: hidden;
     .grid-header{
         grid-area: header;
     }
@@ -205,6 +207,8 @@ header{
     color: rgb(216, 216, 189);
     background-color: #4d4855;
     background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
+    overflow-x: hidden;
+    overflow-y: hidden;
     h1{
         font-family: 'Gruppo', sans-serif;
         font-size: 3rem;
