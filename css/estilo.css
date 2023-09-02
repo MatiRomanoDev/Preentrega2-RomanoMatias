@@ -424,10 +424,13 @@ main {
         max-width: 200px;
         margin: auto; }
     .grid-container .grid-footer {
-      grid-area: footer; }
+      grid-area: footer;
+      display: flex;
+      flex-direction: column; }
       .grid-container .grid-footer .fondopie {
         display: flex;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+        flex-direction: column; }
         .grid-container .grid-footer .fondopie .redes .iconRed {
           max-width: 50px; }
   header {
@@ -460,14 +463,15 @@ main {
       max-width: 300px; }
   .fondopie {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 1rem; }
     .fondopie h4 {
       font-size: 1.1rem;
       font-family: Arial, Helvetica, sans-serif;
       padding-right: 5px; }
-    .fondopie img {
-      max-width: 40px; }
+    .fondopie .redes .iconRed {
+      max-width: 20px; }
   .container-us {
     display: flex;
     flex-direction: column; }
