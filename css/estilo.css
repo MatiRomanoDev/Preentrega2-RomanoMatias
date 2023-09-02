@@ -41,46 +41,40 @@ body {
     color: #d8d8bd;
     background-color: #4d4855;
     background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%); }
-    .grid-container header h1 {
-      font-family: 'Gruppo', sans-serif;
-      font-size: 3rem;
-      padding: 10px; }
-      .grid-container header h1 a {
-        text-decoration: none; }
-        .grid-container header h1 a:visited {
-          color: #d8d8bd; }
-    .grid-container header h2 {
-      padding: 10px;
-      font-style: oblique; }
-    .grid-container header img {
-      width: 100px; }
-    .grid-container header span {
-      font-style: italic;
-      font-size: 1.5rem;
-      margin-top: 20px; }
-    .grid-container header .navbar {
+    .grid-container header .titmain {
       display: flex;
-      padding: 5px;
-      justify-content: flex-end;
-      width: auto; }
-      .grid-container header .navbar .navbar-list {
-        list-style-type: none;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center; }
+      .grid-container header .titmain .logo {
+        max-width: 80px; }
+      .grid-container header .titmain h1 {
+        font-family: 'Gruppo', sans-serif;
+        color: beige; }
+        .grid-container header .titmain h1 a {
+          text-decoration: none; }
+          .grid-container header .titmain h1 a:visited {
+            color: beige; }
+        .grid-container header .titmain h1 span {
+          font-style: italic;
+          font-size: 1.2rem; }
+    .grid-container header .collapse {
+      display: flex;
+      justify-content: space-around; }
+      .grid-container header .collapse .navbar-nav {
         display: flex;
-        justify-items: flex-end; }
-        .grid-container header .navbar .navbar-list li {
-          margin: 0 10px;
-          padding: 20px;
-          font-size: 1.1rem; }
-          .grid-container header .navbar .navbar-list li a {
-            margin: 5px;
-            padding: 1rem;
-            text-decoration: none;
-            color: #d8d8bd;
-            font-size: 1.2rem; }
-            .grid-container header .navbar .navbar-list li a:hover {
-              color: black;
-              background-color: beige;
-              border-radius: 20px; }
+        flex-wrap: wrap;
+        justify-items: end; }
+        .grid-container header .collapse .navbar-nav .nav-item .nav-link {
+          font-size: 1.1rem;
+          color: beige;
+          margin-inline: 20px;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          justify-content: space-between; }
+          .grid-container header .collapse .navbar-nav .nav-item .nav-link:hover {
+            color: #000000;
+            background-color: beige;
+            border-radius: 10px; }
   .grid-container main {
     grid-area: main;
     display: flex;
@@ -103,14 +97,16 @@ body {
       justify-content: center; }
     .grid-container main .carousel {
       max-width: 850px;
-      height: auto;
       justify-items: center;
       margin: auto; }
       .grid-container main .carousel img {
-        max-width: 850px; }
+        max-width: 850px;
+        height: auto; }
       .grid-container main .carousel .labelFoto {
-        background-color: #312e2e;
-        color: #ecb03f; }
+        background-color: #ece2ad;
+        color: #000000;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border: 2px #ca995d solid; }
     .grid-container main .subtit {
       font-weight: bold;
       font-style: italic;
@@ -122,7 +118,8 @@ body {
       max-width: max-content;
       margin: 0 auto;
       background-color: #d6bb81;
-      padding-top: 10px; }
+      padding-top: 10px;
+      border: 2px solid #88683f; }
       .grid-container main .oferta img {
         width: 250px;
         margin: 20px;
@@ -145,69 +142,58 @@ body {
       max-width: 430px;
       border-radius: 10%; }
   .grid-container .grid-footer {
+    display: flex;
+    justify-content: center;
     margin-top: 30px;
     border-top: 4px solid brown;
     background-color: #4d4855;
     background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
-    display: flex;
-    justify-content: center;
     color: #d8d8bd;
     align-items: center;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif; }
-    .grid-container .grid-footer img {
-      width: 60px;
-      height: 60px;
-      align-items: center; }
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem; }
 
 header {
   display: flex;
   align-items: center;
   color: #d8d8bd;
   background-color: #4d4855;
-  background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
-  overflow-x: hidden;
-  overflow-y: hidden; }
-  header h1 {
-    font-family: 'Gruppo', sans-serif;
-    font-size: 3rem;
-    padding: 10px; }
-    header h1 a {
-      text-decoration: none; }
-      header h1 a:visited {
-        color: #d8d8bd; }
-  header h2 {
-    padding: 10px;
-    font-style: oblique; }
-  header img {
-    width: 100px; }
-  header span {
-    font-style: italic;
-    font-size: 1.5rem;
-    margin-top: 20px; }
-  header .navbar {
+  background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%); }
+  header .titmain {
     display: flex;
-    padding: 5px;
-    justify-content: flex-end;
-    width: auto; }
-    header .navbar .navbar-list {
-      list-style-type: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; }
+    header .titmain .logo {
+      max-width: 80px; }
+    header .titmain h1 {
+      font-family: 'Gruppo', sans-serif;
+      color: beige; }
+      header .titmain h1 a {
+        text-decoration: none; }
+        header .titmain h1 a:visited {
+          color: beige; }
+      header .titmain h1 span {
+        font-style: italic;
+        font-size: 1.2rem; }
+  header .collapse {
+    display: flex;
+    justify-content: space-around; }
+    header .collapse .navbar-nav {
       display: flex;
-      justify-items: flex-end; }
-      header .navbar .navbar-list li {
-        margin: 0 10px;
-        padding: 20px;
-        font-size: 1.1rem; }
-        header .navbar .navbar-list li a {
-          margin: 5px;
-          padding: 1rem;
-          text-decoration: none;
-          color: #d8d8bd;
-          font-size: 1.2rem; }
-          header .navbar .navbar-list li a:hover {
-            color: black;
-            background-color: beige;
-            border-radius: 20px; }
+      flex-wrap: wrap;
+      justify-items: end; }
+      header .collapse .navbar-nav .nav-item .nav-link {
+        font-size: 1.1rem;
+        color: beige;
+        margin-inline: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        justify-content: space-between; }
+        header .collapse .navbar-nav .nav-item .nav-link:hover {
+          color: #000000;
+          background-color: beige;
+          border-radius: 10px; }
 
 main {
   display: flex;
@@ -215,10 +201,9 @@ main {
   flex-direction: column;
   margin-top: 60px; }
   main .subtitulo {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-    font-size: 3rem;
-    padding: 20px; }
+    font-size: 3rem; }
   main .contenedor {
     display: flex;
     justify-content: space-around;
@@ -241,22 +226,23 @@ main {
         opacity: 1; }
 
 .fondopie {
+  padding: 15px;
   display: flex;
   border-top: 5px solid brown;
   align-items: center;
   justify-content: center;
-  height: 90%;
-  margin-top: 50px;
-  font-size: 1.5rem;
-  font-family: Arial, Helvetica, sans-serif;
   color: #d8d8bd;
   background-color: #4d4855;
   background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
-  .fondopie img {
+  .fondopie a img {
+    margin-inline: 15px;
     max-width: 60px;
     max-height: 60px;
     align-items: center; }
+  .fondopie h4 {
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif; }
 
 .container-us {
   display: grid;
@@ -268,6 +254,9 @@ main {
   .container-us .grid-header {
     grid-area: header; }
   .container-us .grid-main {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
     grid-area: main;
     display: flex;
     justify-content: center; }
@@ -279,8 +268,8 @@ main {
     .container-us .grid-main .aboutUs {
       background-color: #fce2b39c;
       border-style: double;
-      font-size: 2rem;
-      margin: 10px;
+      font-size: 1.5rem;
+      margin: 0 auto;
       padding: 10px;
       text-align: justify; }
     .container-us .grid-main .contUs {
@@ -305,73 +294,93 @@ main {
 .formulario {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: safe; }
+  justify-content: center;
+  gap: 8rem;
+  padding-bottom: 30px; }
   .formulario .form {
-    padding-top: 30px;
+    padding: 10px 20px;
     width: 600px;
     background-color: #d6b46cbd;
-    font-family: Arial, Helvetica, sans-serif; }
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: none; }
     .formulario .form .colorBoton {
       background-color: #421e1a;
       color: #d8ba34; }
       .formulario .form .colorBoton:hover {
         background-color: #ddda42;
         color: #11100f; }
-  .formulario .relleno {
-    margin-top: 20px;
-    max-width: 400px;
-    height: auto;
-    opacity: .9; }
+  .formulario .infoContacto {
+    background-color: #d6b46cbd;
+    padding: 20px;
+    border-style: inset;
+    display: flex;
+    flex-direction: column; }
+    .formulario .infoContacto h5 span {
+      font-style: italic;
+      margin: 15px; }
+    .formulario .infoContacto .videoFrame {
+      border: 2px solid black;
+      margin-top: 50px;
+      width: 450px;
+      height: 300px; }
 
-.contRecetas img {
-  max-width: 450px;
-  margin: auto;
-  padding-left: 30px; }
-
-.contRecetas .listaIngredientes {
-  text-align: justify;
-  justify-content: center;
-  margin: auto; }
-
-.contRecetas .subt {
-  margin: auto; }
-
-.contRecetas .cafeHelado {
-  background-color: #f3ca7e;
-  display: flex;
-  font-style: italic;
-  font-size: 1.8rem;
-  justify-content: space-around;
-  border-style: dotted; }
-  .contRecetas .cafeHelado h2 {
-    padding-left: 20px;
-    font-size: 2rem;
-    font-style: italic; }
-
-.contRecetas .cafeDom {
-  background-color: #ebb34c;
-  display: flex;
-  font-style: italic;
-  font-size: 1.8rem;
-  border-style: dotted;
-  border-bottom: none;
-  border-top: none;
-  justify-content: space-around; }
-  .contRecetas .cafeDom h2 {
+.contRecetas {
+  max-width: 1440px;
+  margin: 0 auto; }
+  .contRecetas img {
+    max-width: 450px;
+    margin: auto;
+    padding-left: 30px; }
+  .contRecetas .listaIngredientes {
+    font-size: 19px;
+    text-align: justify;
+    justify-content: center;
     margin: 0 auto;
-    padding-left: 20px;
-    font-size: 2rem;
-    font-style: italic; }
-
-.contRecetas .cafeCorretto {
-  background-color: #f3c56f;
-  display: flex;
-  font-style: italic;
-  font-size: 1.8rem;
-  border-style: dotted; }
-  .contRecetas .cafeCorretto img {
-    margin-right: 0%; }
+    padding: 20px 10px; }
+  .contRecetas .subt {
+    margin: auto; }
+  .contRecetas .cafeHelado {
+    background-color: #f3ca7e;
+    display: flex;
+    font-style: italic;
+    justify-content: space-around;
+    border-style: solid;
+    margin: 1rem; }
+    .contRecetas .cafeHelado img {
+      margin-right: 0%;
+      margin: 1rem 0; }
+    .contRecetas .cafeHelado h2 {
+      padding-left: 20px;
+      font-size: 2rem;
+      font-style: italic; }
+  .contRecetas .cafeMocha {
+    background-color: #dfa63d;
+    display: flex;
+    font-style: italic;
+    justify-content: space-around;
+    border-style: solid;
+    margin: 1rem; }
+    .contRecetas .cafeMocha img {
+      margin-right: 0%;
+      margin: 1rem 0; }
+    .contRecetas .cafeMocha h2 {
+      padding-left: 20px;
+      font-size: 2rem;
+      font-style: italic; }
+  .contRecetas .cafeCorretto {
+    background-color: #ecc885;
+    display: flex;
+    font-style: italic;
+    justify-content: space-around;
+    border-style: solid;
+    margin: 1rem; }
+    .contRecetas .cafeCorretto img {
+      margin-right: 0%;
+      margin: 1rem 0; }
+    .contRecetas .cafeCorretto h2 {
+      padding-left: 20px;
+      font-size: 2rem;
+      font-style: italic; }
 
 @media screen and (max-width: 480px) {
   .grid-container {
@@ -381,24 +390,11 @@ main {
     grid-template-columns: 1fr; }
     .grid-container .grid-header {
       grid-area: header;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start; }
-      .grid-container .grid-header h1 {
-        font-size: 1.5rem;
-        padding: 5px; }
-      .grid-container .grid-header img {
-        max-width: 80px; }
-      .grid-container .grid-header span {
-        font-size: 1.5rem; }
-      .grid-container .grid-header .navbar .navbar-list {
-        display: flex;
-        flex-direction: column; }
-        .grid-container .grid-header .navbar .navbar-list li {
-          padding: 5px; }
-          .grid-container .grid-header .navbar .navbar-list li a {
-            padding: 0;
-            font-size: .8rem; }
+      display: flex;
+      align-items: center;
+      color: #d8d8bd;
+      background-color: #4d4855;
+      background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%); }
     .grid-container .grid-main {
       padding: 10px;
       grid-area: main;
@@ -408,9 +404,9 @@ main {
       .grid-container .grid-main .subtitulo {
         font-size: 2rem;
         text-align: start; }
-      .grid-container .grid-main .carrusel-container {
-        justify-items: flex-start;
-        margin: 0%; }
+      .grid-container .grid-main .carousel-item .labelFoto {
+        display: inline;
+        font-size: smaller; }
       .grid-container .grid-main .subtit {
         font-size: 1.2rem;
         text-align: center;
@@ -429,10 +425,11 @@ main {
         margin: auto; }
     .grid-container .grid-footer {
       grid-area: footer; }
-      .grid-container .grid-footer h4 {
-        font-size: 1rem; }
-      .grid-container .grid-footer img {
-        max-width: 50px; }
+      .grid-container .grid-footer .fondopie {
+        display: flex;
+        flex-wrap: wrap; }
+        .grid-container .grid-footer .fondopie .redes .iconRed {
+          max-width: 50px; }
   header {
     flex-direction: column;
     justify-content: flex-start;
@@ -462,13 +459,15 @@ main {
     main .contenedor .producto img {
       max-width: 300px; }
   .fondopie {
-    display: flex; }
+    display: flex;
+    justify-content: center;
+    padding: 1rem; }
     .fondopie h4 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-family: Arial, Helvetica, sans-serif;
       padding-right: 5px; }
     .fondopie img {
-      width: 50px; }
+      max-width: 40px; }
   .container-us {
     display: flex;
     flex-direction: column; }
@@ -484,22 +483,27 @@ main {
       .container-us .grid-main .contUs {
         flex-direction: column; }
         .container-us .grid-main .contUs .videoFrame {
-          display: none; }
+          max-width: 450px;
+          width: 100%;
+          height: max-content; }
         .container-us .grid-main .contUs img {
-          margin-top: 20px;
+          margin-block: 20px;
           max-width: 300px; }
   .subtitulo {
     font-size: 2rem; }
   .formulario {
-    margin-top: 0; }
+    margin-top: 0;
+    padding: 10px; }
     .formulario img {
-      display: none;
-      max-width: 300px;
-      height: auto; }
+      max-width: 50px; }
+    .formulario .infoContacto {
+      margin-inline: 5px; }
+      .formulario .infoContacto .videoFrame {
+        max-width: 300px;
+        width: 100%; }
   .contRecetas {
-    margin-left: 0; }
-    .contRecetas img {
-      display: none; }
+    margin: auto;
+    justify-content: center; }
     .contRecetas .subtitulo {
       font-size: 1.8rem;
       text-align: center; }
@@ -516,7 +520,10 @@ main {
         text-align: center; }
       .contRecetas .cafeHelado .listaIngredientes .subt {
         font-size: 1rem; }
-    .contRecetas .cafeDom {
+      .contRecetas .cafeHelado img {
+        max-width: 450px;
+        width: 100%; }
+    .contRecetas .cafeMocha {
       display: flex;
       flex-direction: column;
       max-width: 400px;
@@ -524,11 +531,14 @@ main {
       padding: 5px;
       margin: auto;
       border: none; }
-      .contRecetas .cafeDom h2 {
+      .contRecetas .cafeMocha h2 {
         font-size: 1.5rem;
         text-align: center; }
-      .contRecetas .cafeDom .listaIngredientes .subt {
+      .contRecetas .cafeMocha .listaIngredientes .subt {
         font-size: 1rem; }
+      .contRecetas .cafeMocha img {
+        max-width: 450px;
+        width: 100%; }
     .contRecetas .cafeCorretto {
       display: flex;
       flex-direction: column;
@@ -541,4 +551,7 @@ main {
         font-size: 1.5rem;
         text-align: center; }
       .contRecetas .cafeCorretto .listaIngredientes .subt {
-        font-size: 1rem; } }
+        font-size: 1rem; }
+      .contRecetas .cafeCorretto img {
+        max-width: 450px;
+        width: 100%; } }

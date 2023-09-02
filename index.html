@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description“ content="Explora y saborea el mejor café de especialidad en nuestra tienda en línea. Descubre los recomendados y más vendidos. ¡Compra ahora y disfruta del aroma y sabor únicos!">
-        <meta name="keywords"  content="Café, Calidad, Variedades, Compra, Sabores, Aromas, Experiencia, Recomendados, Frescura, Online">
+        <meta name="description" content="Explora y saborea el mejor café de especialidad en nuestra tienda en línea. Descubre los recomendados y más vendidos. ¡Compra ahora y disfruta del aroma y sabor únicos!" />
+        <meta name="keywords" content="Café, Calidad, Variedades, Compra, Sabores, Aromas, Experiencia, Recomendados, Frescura, Online" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
@@ -15,27 +15,41 @@
         <title>DeCaffé - Inicio</title>
     </head>
     <body>
-        <div class="grid-container">           
-            <header class="grid_item grid-header">
-                <div class="animate__animated animate__bounceInRight ">
-                    <a href="index.html"><img src="img/cafe-logo2.png" alt="Boton home" /> </a>
+        <div class="grid-container">
+            <header>
+                <div class="titmain ">
+                    <a href="index.html"> <img class="logo animate__animated animate__bounceInLeft" src="./img/cafe-logo2.png" alt="" /></a>
+                    <h1 class="titulo">
+                        <a href="index.html">DeCaffé <span>|| Café de especialidad </span> </a>
+                    </h1>
                 </div>
-                <h1 class="banner">
-                    <a href="index.html">DeCaffé <span> || Café de especialidad</span></a>
-                </h1>
-                <nav class="navbar">
-                    <ul class="navbar-list">
-                        <li><a href="./index.html">Inicio</a></li>
-                        <li><a href="./pages/productos.html">Productos</a></li>
-                        <li><a href="./pages/recetas.html">Recetas</a></li>
-                        <li><a href="./pages/nosotros.html">Nosotros</a></li>
-                        <li><a href="./pages/contacto.html">Contacto</a></li>
-                    </ul>
+                <nav class="navbar navbar-expand">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./pages/productos.html">Productos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./pages/recetas.html">Recetas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </nav>
-            </header>           
-            <main class="carrusel-container m-auto grid-main ">
+            </header>
+            <main class="carrusel-container m-auto grid-main">
                 <h2 class="subtitulo">Recomendados esta semana</h2>
-                <div id="carouselExampleDark" class="carousel m-auto carousel-dark slide d-flex">
+                <section id="carouselExampleDark" class="carousel m-auto carousel-dark slide d-flex">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -44,37 +58,37 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="5000">
                             <img src="./img/cafe-carrusel1.jpg" class="d-block w-100 imgCarrusel" alt="Foto Carrusel café italia" />
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption d-md-block">
                                 <h5 class="labelFoto">Café: Italia</h5>
                                 <p class="labelFoto">Se caracteriza por su intenso sabor y aroma, con un toque amargo y una crema espesa y consistente en la parte superior.</p>
                             </div>
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
                             <img src="./img/cafe-carrusel2.jpg" class="d-block w-100 imgCarrusel" alt="Foto Carrusel café etiopía" />
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption d-md-block">
                                 <h5 class="labelFoto">Café: Etiopía</h5>
                                 <p class="labelFoto">Se destaca por su delicado sabor floral y afrutado, con notas distintivas de bergamota y jazmín, ofreciendo una experiencia aromática única.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="./img/cafe-carrusel4.jpg" class="d-block w-100 imgCarrusel" alt="Foto Carrusel café colombia" />
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption d-md-block">
                                 <h5 class="labelFoto">Café: Colombia</h5>
                                 <p class="labelFoto">Se distingue por su suavidad y cuerpo balanceado, con sabores dulces y notas de caramelo, chocolate y frutas</p>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <button class="carousel-control-prev botonCarr" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <button class="carousel-control-next botonCarr" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
-                </div>
+                </section>
                 <h3 class="subtit">Mas vendidos</h3>
-                <div class="oferta">
+                <section class="oferta">
                     <div class="productoV">
                         <h4>Café: Colombia</h4>
                         <a href="#"><img src="./img/cafe-carrusel4.jpg" alt="Café de Colombia" /></a>
@@ -84,12 +98,12 @@
                         <a href="#"><img src="./img/bolsa-tela-granos-cafe.jpg" alt="Café de Brasil" /></a>
                     </div>
                     <div class="productoV">
-                        <h4>Café Etiopía</h4>
+                        <h4>Café: Etiopía</h4>
                         <a href="#"><img src="./img/cafe-carrusel2.jpg" alt="Café de Etiopía" /></a>
                     </div>
-                </div>
-            </main>            
-            <aside class="grid_item grid-aside lateral ">
+                </section>
+            </main>
+            <aside class="grid_item grid-aside lateral">
                 <div class="lateralBoton animate__animated animate__rubberBand">
                     <h4>¡Conocé nuestras recetas!</h4>
                     <a class="animate__rubberBand" href="./pages/recetas.html"> <img src="./img/recetas.png" alt="Acceso a página de recetas" /></a>
@@ -98,14 +112,14 @@
                     <h4>¿Tenés alguna duda?</h4>
                     <a href="./pages/contacto.html"><img src="./img/logo-contact.png" alt="Acceso a página de contacto" /></a>
                 </div>
-            </aside>           
-            <footer class="fondopie grid-footer" >
+            </aside>
+            <footer class="fondopie grid-footer">
                 <h4>Seguinos en nuestras redes!</h4>
                 <div class="animate__animated animate__flipInX">
-                    <a class="iconRed" href="http://www.instagram.com" target="_blank"><img src="./img/instagram-logo.png" alt="Icono instagram"/></a>
-                    <a class="iconRed" href="http://www.twitter.com" target="_blank"><img src="./img/tw-logo.webp" alt="Icono twitter" /></a>
-                    <a class="iconRed" href="http://www.facebook.com" target="_blank"><img src="./img/facebook-logo-0.png" alt="Icono facebook" /> </a>
-                </div>            
+                    <a class="iconRed" href="http://www.instagram.com" target="_blank"><img src="./img/instagram.png" alt="Icono instagram" /></a>
+                    <a class="iconRed" href="http://www.twitter.com" target="_blank"><img src="./img/logo-tw.png" alt="Icono twitter" /></a>
+                    <a class="iconRed" href="http://www.facebook.com" target="_blank"><img src="./img/facebook.png" alt="Icono facebook" /> </a>
+                </div>
             </footer>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
