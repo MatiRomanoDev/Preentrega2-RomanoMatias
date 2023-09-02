@@ -468,9 +468,6 @@ main{
         @include fondoRecetas($fondoReceta3)
     }
 }
-.videoFrame{
-    
-}
 @media screen and (max-width:480px){
     .grid-container {  
         justify-content: flex-start;          
