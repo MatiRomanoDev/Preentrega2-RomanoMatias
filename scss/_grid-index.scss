@@ -1,0 +1,189 @@
+.grid-container{   
+    min-height: 100vh; 
+    display: grid;          
+    background-image: url(../img/coffee-pattern.jpg);
+    background-repeat:space;
+    grid-template-areas: 
+    "header header "
+    "main  aside "
+    "footer  footer ";
+    grid-template-rows: repeat(3, auto);  
+    grid-template-columns: 2fr 1fr; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+    .grid-header{
+        grid-area: header;
+    }
+    .grid-main{
+        display: flex;    
+        grid-area: main;
+        justify-content: center;        
+    }
+    .grid-aside{
+        display: flex;
+        grid-area: aside;
+        align-items: center;
+        flex-direction: column;
+        justify-content:space-evenly;
+    }
+    .grid-footer{
+        align-items: center;
+        grid-area: footer;        
+    }
+    header{
+        grid-area: header;
+        display: flex;
+        align-items: center;   
+        color: rgb(216, 216, 189);
+        background-color: #4d4855;
+        background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);
+        .titmain{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            .logo{
+                max-width: 80px;
+            }
+            h1{
+                font-family: 'Gruppo', sans-serif;
+                color: beige;
+                a{
+                    text-decoration: none;
+                    &:visited{
+                        color: beige;
+                    }            
+                }
+                span{
+                    font-style: italic;
+                    font-size: 1.2rem;
+                }       
+            }
+        }
+        .collapse{
+            display: flex;
+            justify-content: space-around;            
+            .navbar-nav{
+                display: flex;
+                flex-wrap: wrap;
+                justify-items: end;                
+                .nav-item{
+                    .nav-link{
+                        font-size: 1.1rem;
+                        color: beige;
+                        margin-inline: 20px;
+                        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        justify-content: space-between;
+                        &:hover{
+                            color: #000000;
+                            background-color:beige ;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    main{
+        grid-area: main; 
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 60px;
+        width: 66vw;
+        h2{
+            justify-self: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin-bottom: 10px;
+        }
+        .subtitulo{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 3rem;
+            padding: 20px;
+                
+        }
+        .grid-main{
+            display: flex;    
+            grid-area: main;
+            justify-content: center;
+        }
+        .carousel{
+            max-width: 850px;
+            justify-items: center;
+            margin: auto;
+            img{
+                max-width: 850px;
+                height: auto;
+            }
+            .labelFoto{
+                background-color: #ece2ad;
+                color:#000000 ;      
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                border: 2px rgb(202, 153, 93) solid;          
+            }
+        }
+        .subtit{
+            font-weight: bold;
+            font-style: italic;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px;
+            margin: auto;
+        }
+        .oferta{
+            display: flex;
+            max-width: max-content;    
+            margin: 0 auto;
+            background-color: rgb(214, 187, 129);
+            padding-top: 10px;
+            border: 2px solid rgb(136, 104, 63);
+            img{
+                width: 250px;
+                margin: 20px;  
+                opacity: .8;
+                &:hover{
+                    border-style:  double;
+                    border-color: #000000;
+                    border-width: .2rem;
+                }
+            }
+            h4{
+                text-align: center;
+            }
+        }
+
+    }
+    .grid-aside{
+        width: auto;
+        display: flex;
+        grid-area: aside;
+        align-items: center;
+        flex-direction:column;
+        h4{
+            text-align: center;
+        }
+        img{
+            max-width: 430px;
+            border-radius: 10%;
+        }
+    }
+    
+    
+    .grid-footer{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        border-top: 4px solid brown;
+        background-color: #4d4855;
+        background-image: linear-gradient(147deg, #4d4855 0%, #000000 74%);        
+        color:rgb(216, 216, 189);
+        align-items: center;
+        text-align: center;
+        font-family:Arial, Helvetica, sans-serif ;
+        font-size: 1rem;
+        
+    }
+
+}

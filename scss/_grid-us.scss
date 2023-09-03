@@ -1,0 +1,52 @@
+.container-us{    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:auto auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+    .grid-header{
+        grid-area: header;
+    }
+    .grid-main{
+        max-width: 1440px;
+        width: 100%;
+        margin: auto;
+        grid-area: main;
+        display: flex;
+        justify-content: center;
+        .subtitulo{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 3rem;
+            padding: 20px;    
+        }
+        .aboutUs{
+            background-color: #fce2b39c;    
+            border-style:double;
+            font-size: 1.5rem;
+            margin: 10px auto;
+            padding: 15px;
+            text-align: justify;
+        }
+        .contUs{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .videoFrame{
+                padding: 50px;
+                width: 1080px;
+                height: 720px;
+            }
+            img{
+                width: 400px;
+            }
+        }
+    }
+    .grid-footer{
+        grid-area: footer;        
+    }
+}

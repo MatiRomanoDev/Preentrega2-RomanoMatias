@@ -1,0 +1,39 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 60px;
+    .subtitulo{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        font-size: 3rem;
+        
+    }
+    .contenedor{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap:wrap;
+        img{
+            width: 350px;
+            padding-block: 20px;
+            margin: 1rem;
+        }
+        .producto{
+            h3{
+                text-align: center;
+            }
+            img{
+                max-width: 500px;
+                border-style:inset;
+                border-color: #000000;
+                opacity: .8;
+                &:hover{
+                    border-style: double;
+                    border-width: 5px;
+                    border-color: #000000;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
